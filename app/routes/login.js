@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
 	try{
 		//Find the client with the body email
 		const client = await Client.findOne({email: req.body.email});
-		//If the client exists, create a JWT with all the client's info
+		//If the client exists, create and return a JWT with all the client's info
 		if(client){
 			jwt.sign({client: client}, process.env.SECRET_KEY, { expiresIn: '1h' }, (err, token) => {
 				res.json({
