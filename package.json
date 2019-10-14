@@ -1,0 +1,25 @@
+{
+  "name": "backend-axa",
+  "version": "1.0.0",
+  "description": "Backend Assestment AXA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randeth/backend-axa.git"
+  },
+  "author": "Albert Morote",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/randeth/backend-axa/issues"
+  },
+  "homepage": "https://github.com/randeth/backend-axa#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.4",
+    "nodemon": "^1.19.3"
+  }
+}
