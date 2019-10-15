@@ -1,12 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const jwt = require('jsonwebtoken')
 require('dotenv/config')
-
-// Import Client mongoose schema
-const Client = require('./app/models/Client')
-const Policy = require('./app/models/Policy')
 
 // Import routes
 const clientsRoute = require('./app/routes/clients')
@@ -28,10 +23,10 @@ mongoose.connect(
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err, client) => {
     if (err) {
-        	console.log(err)
-    	} else {
-    		console.log('Connected to DB')
-    	}
+      console.log(err)
+    } else {
+      console.log('Connected to DB')
+    }
   }
 )
 

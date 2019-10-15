@@ -3,6 +3,7 @@ const router = express.Router()
 const jwt = require('jsonwebtoken')
 require('dotenv/config')
 
+// Import Client mongoose schema
 const Client = require('../models/Client')
 
 // Login with the client EMAIL
@@ -13,9 +14,13 @@ router.post('/', async (req, res) => {
     // If the client exists, create and return a JWT with all the client's info
     if (client) {
       jwt.sign({ client: client }, process.env.SECRET_KEY, { expiresIn: '1h' }, (err, token) => {
-        res.json({
-          token
-        })
+        if (err) {
+          res.sendStatus(403)
+        } else {
+          res.json({
+            token
+          })
+        }
       })
     } else {
       res.json({ message: 'Email not found' })

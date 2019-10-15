@@ -4,6 +4,7 @@ const verifyToken = require('./login')
 const jwt = require('jsonwebtoken')
 require('dotenv/config')
 
+// Import Client mongoose schema
 const Client = require('../models/Client')
 
 // Get client data with a given :type ('id' or 'name')

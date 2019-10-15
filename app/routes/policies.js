@@ -4,6 +4,7 @@ const verifyToken = require('./login')
 const jwt = require('jsonwebtoken')
 require('dotenv/config')
 
+// Import Client and Policy mongoose schema
 const Client = require('../models/Client')
 const Policy = require('../models/Policy')
 
