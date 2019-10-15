@@ -1,6 +1,7 @@
 # AXA Backend Assesment
 
 ## List of endpoints
+I used Postman during this project to make the API calls  
 
 **GET**
 
@@ -33,6 +34,9 @@ In this assesment I used the following resources:
 -chai: assertion library I used to create the testing  
 -dotenv: I stored passwords, port numbers, etc in a .env file and this package makes it easier to use  
 -standardJS: a really nice javascript linter I used previously  
+
+## Env variables
+I used a '.env' file to store some values, and that file is added to this project just because it is an assesment. This kind of files should always be added to the '.gitignore'  
 
 ## Installation
 
