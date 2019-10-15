@@ -30,7 +30,7 @@ router.get('/client/:clientName', verifyToken.verifyToken, async (req, res) => {
 
           // If the searched client is found, show it in the response
           if (clients.length > 0) {
-            res.json({ clients, policiesArray })
+            res.json({ clients, policies: policiesArray })
           } else {
             res.json({ message: 'Client not found' })
           }

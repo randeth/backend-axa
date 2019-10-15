@@ -8,8 +8,12 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "standard"
-  
+    "test": "standard && mocha"
+  },
+  "standard": {
+    "ignore": [
+      "/test/"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,9 +26,12 @@
   },
   "homepage": "https://github.com/randeth/backend-axa#readme",
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.1",
     "mongoose": "^5.7.4",
     "nodemon": "^1.19.3"
   }
